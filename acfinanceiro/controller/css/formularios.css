@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+
+/*DEFAULT*/
+* {
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+    border: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-size: 100%;
+    font-family: 'Oswald', sans-serif;
+    outline: none;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.row {
+    flex-direction: row;
+}
+body {
+    height: 100vh;
+}
+.barra {
+    height: 60px;
+    background-color: #fff;
+    z-index: 99;
+}
+.box {
+    max-width: 60px;
+    min-width: 60px;
+    max-height: 60px;
+    min-height: 60px;
+    cursor: pointer;
+}
+img {
+    object-fit: cover;
+}
+a{
+    color: #000;
+}
+a:hover {
+    opacity: 0.6;
+}
+input.oculto {
+    display: none;
+}
+.perguntas { padding: 18px; }
+/*CONTAINER MENU*/
+#menu {
+    width: 0px;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 99;
+    overflow: auto;
+    justify-content: flex-start;
+    align-items: flex-end;
+    transition: 0.6s;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgb(0, 0, 0) 50%, rgb(0, 17, 29) 100%);
+}
+#menu li {
+    width: 90%;
+    padding: 10px 3%;
+    border-top: #fff solid 1px;
+    border-radius: 0px 50px 0px 0px;
+}
+#menu a {
+    text-align: left;
+    color: #fff;
+}
+#menu .btn-close {
+    border-left: 2px solid #fff;
+    text-align: center;
+    border-radius: 100%;
+}
+#menu .btn-close p { color: #fff;}
+
+/* CONTAINER FORMULÁRIO */
+#formulario {
+    justify-content: flex-start;
+    min-height: calc(100% - 120px);
+    padding: 15px;
+}
+@media (orientation: portrait) {
+    #formulario {
+        min-height: calc(100vh - 180px);
+    }
+}
+fieldset, #formulario .txt {
+    text-align: center;
+}
+#formulario .txt {
+    height: 15vh;
+}
+#formulario .txt h1 {
+    font-size: 200%;
+}
+#form {
+    margin: auto;
+    max-width: 400px;
+}
+#form .paragrafos {
+    padding-bottom: 20px;
+}
+
+#form input, textarea, .olhor {
+    border-bottom: 1px solid #9FA9BC;
+    padding: 13px;
+    margin-bottom: 5px;
+}
+#form .submite {
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px 0px;
+}
+#form .submite:hover {
+    opacity: 0.6;
+}
+#form .mostrar-senha {
+    align-items: flex-end;
+}
+#form .olhor{
+    max-width: 25px;
+    cursor: pointer;
+}
+#desmarcar {
+    display: none;
+}
+
+/* CONTAINER FOOTER */
+#footer {
+    padding-left: 15px;
+}
+#footer .img-social {
+    justify-content: flex-start;
+}
+#footer .img-social a {
+    max-width: 20px;
+    min-width: 20px;
+    max-height: 20px;
+    min-height: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+#footer .ano p {
+    text-align: right;
+    padding-right: 25px;
+}

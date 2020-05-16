@@ -1,0 +1,31 @@
+<header id="header" class="container barra row">
+    <span class="container box open" onclick="openNav()" title="menu">&#9781;</span>
+    <h1><a href="/app/acfinanceiro/view/login/">Gestor Financeiro</a></h1>
+    <a class="box perguntas" href="/app/acfinanceiro/view/login/perguntas.php"><img src="/app/acfinanceiro/view/svg/question.svg" alt="perguntas"></a>
+</header>
+
+<section id="menu" class="container gradiente">
+    <div onclick="closeNav()" class="container btn-close box">
+        <p>&#10008;</p>
+    </div>
+    <nav class="menu">
+        <ul class="home-link">
+            <li class="container"><a onclick="closeNav()" href="/app/acfinanceiro/view/login/">Login</a></li>
+            <li class="container"><a onclick="closeNav()" href="/app/acfinanceiro/view/login/registrar.php">Cadastrar</a></li>
+            <li class="container"><a onclick="closeNav()" href="/app/acfinanceiro/view/login/recover.php">Recuperar Senha</a></li>
+
+            <li class="container"><a onclick="closeNav()" href="https://www.instagram.com/rsanttos89/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li class="container"><a onclick="closeNav()" href="https://www.linkedin.com/in/rsanttos89/" target="_blank" rel="noopener noreferrer">LinkeDin</a></li>
+            <li class="container"><a onclick="closeNav()" href="https://github.com/rsanttos89/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        </ul>
+    </nav>
+</section>
+
+<script>
+    function openNav(){
+        document.getElementById("menu").style.width = "100%";
+    }
+    function closeNav(){
+        document.getElementById("menu").style.width = "0px";
+    }
+</script>

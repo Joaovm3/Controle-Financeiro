@@ -1,0 +1,90 @@
+<header id="header" class="container row">
+    <h1>Seja bem-vindo!</h1>
+
+    <section id="menu" class="container gradiente">
+        <div onclick="closeNav()" class="container btn-close">
+            <p>&#10008;</p>
+        </div>
+        <nav class="menu" class="gradiente">
+            <ul class="home-link">
+                <li class="container"><a onclick="closeNav()" href="/app/acfinanceiro/view/information/current.php">Home</a></li>
+                <li class="container"><a onclick="closeNav()" href="/app/acfinanceiro/view/information/question.php">Perguntas</a></li>
+                <li class="container"><a onclick="closeNav()" href="/app/acfinanceiro/view/information/extract_patrimonio.php">Detalhes Patrimonial</a></li>
+                <li class="container"><a onclick="closeNav()" href="/app/acfinanceiro/controller/php/logout.php">Sair</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <section id="plus" class="container gradiente">
+        <div onclick="closePlus()" class="container btn-close">
+            <p>&#10008;</p>
+        </div>
+        <nav class="plus" class="gradiente">
+            <ul class="home-link">
+                <li class="container"><a onclick="closePlus()" href="/app/acfinanceiro/view/records/register.php?id_directory=ativos">Ativos</a></li>
+                <li class="container"><a onclick="closePlus()" href="/app/acfinanceiro/view/records/register.php?id_directory=passivos">Passivos</a></li>
+                <li class="container"><a onclick="closePlus()" href="/app/acfinanceiro/view/records/register.php?id_directory=patrimonio">Patrimônio</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <section id="arquivos" class="container gradiente">
+        <div onclick="closeFiles()" class="container btn-close">
+            <p>&#10008;</p>
+        </div>
+        <nav class="arquivos" class="gradiente">
+            <ul class="home-link">
+                <li class="container"><a onclick="closeFiles()" 
+                    href="/app/acfinanceiro/view/information/current_anual.php?ano=<?php echo date('Y');?>">Relatório / <?php echo date('Y');?></a>
+                </li>
+                <li class="container"><a onclick="closeFiles()" 
+                    href="/app/acfinanceiro/view/information/current_anual.php?ano=<?php echo date('Y')-1;?>">Relatório / <?php echo date('Y')-1;?></a>
+                </li>
+                <li class="container"><a onclick="closeFiles()" 
+                    href="/app/acfinanceiro/view/information/current_anual.php?ano=<?php echo date('Y')-2;?>">Relatório / <?php echo date('Y')-2;?></a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<footer id="footer" class="container row">
+    <div class="container box">
+        <span class="container open" onclick="openNav()" title="menu">&#9781;</span>
+    </div>
+    <div class="container box">
+        <a href="/app/acfinanceiro/view/information/current.php" class="btn background home" title="home"></a>
+    </div>
+    <div class="container box">
+        <span class="btn background plus" onclick="openPlus()" title="plus"></span>
+    </div>
+    <div class="container box">
+        <span class="btn background arquivos" onclick="openFiles()" title="arquivos"></span>
+    </div>
+    <div class="container box">
+        <a href="/app/acfinanceiro/controller/php/logout.php" class="btn background off" title="off"></a>
+    </div>
+</footer>
+
+<script>
+    function openNav(){
+        document.getElementById("menu").style.width = "100%";
+    }
+    function closeNav(){
+        document.getElementById("menu").style.width = "0px";
+    }
+
+    function openPlus(){
+        document.getElementById("plus").style.width = "100%";
+    }
+    function closePlus(){
+        document.getElementById("plus").style.width = "0px";
+    }
+
+    function openFiles(){
+        document.getElementById("arquivos").style.width = "100%";
+    }
+    function closeFiles(){
+        document.getElementById("arquivos").style.width = "0px";
+    }
+</script>
